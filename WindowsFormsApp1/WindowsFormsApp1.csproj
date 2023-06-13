@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F2D3F2E-61E1-46BA-87C0-24440FE2FD52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\QLACCOUNTBLL.cs" />
+    <Compile Include="BLL\QLDOANHTHUBLL.cs" />
+    <Compile Include="BLL\QLHOADONBLL.cs" />
+    <Compile Include="BLL\QLNHANVIENBLL.cs" />
+    <Compile Include="BLL\QLSANPHAMBLL.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\HoaDonView\addHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HoaDonView\addHD.Designer.cs">
+      <DependentUpon>addHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NhanVienView\AddNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NhanVienView\AddNV.Designer.cs">
+      <DependentUpon>AddNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Loginview\ChangepasswordNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Loginview\ChangepasswordNV.Designer.cs">
+      <DependentUpon>ChangepasswordNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Loginview\changepasswordowner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Loginview\changepasswordowner.Designer.cs">
+      <DependentUpon>changepasswordowner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SanPhamView\ChiTietSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SanPhamView\ChiTietSP.Designer.cs">
+      <DependentUpon>ChiTietSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NhanVienView\DiemDanhUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\NhanVienView\DiemDanhUserControl.Designer.cs">
+      <DependentUpon>DiemDanhUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChuShopView\DoanhThuNam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ChuShopView\DoanhThuNam.Designer.cs">
+      <DependentUpon>DoanhThuNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChuShopView\DoanhThuThang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ChuShopView\DoanhThuThang.Designer.cs">
+      <DependentUpon>DoanhThuThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChuShopView\DoanhThuTuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ChuShopView\DoanhThuTuan.Designer.cs">
+      <DependentUpon>DoanhThuTuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
+    <Compile Include="CreateDB.cs" />
+    <Compile Include="DTO\ChiTietHoaDonView.cs" />
+    <Compile Include="DTO\MaGiamGia.cs" />
+    <Compile Include="DTO\DoanhThu.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\Hoadonview.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\NhanVienView.cs" />
+    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="DTO\SanPhamView.cs" />
+    <Compile Include="DTO\SoLuongSP.cs" />
+    <Compile Include="View\NhanVienView\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NhanVienView\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HoaDonView\MaGiamGia_user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\HoaDonView\MaGiamGia_user.Designer.cs">
+      <DependentUpon>MaGiamGia_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NhanVienView\Employee_user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\NhanVienView\Employee_user.Designer.cs">
+      <DependentUpon>Employee_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Loginview\forgetpasswordform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Loginview\forgetpasswordform.Designer.cs">
+      <DependentUpon>forgetpasswordform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HoaDonView\Hoadon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\HoaDonView\Hoadon.Designer.cs">
+      <DependentUpon>Hoadon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Loginview\Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Loginview\Loginform.Designer.cs">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChuShopView\OwnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChuShopView\OwnerForm.Designer.cs">
+      <DependentUpon>OwnerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChuShopView\Owner_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ChuShopView\Owner_User.Designer.cs">
+      <DependentUpon>Owner_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\NhanVienView\Nhanvienusercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\NhanVienView\Nhanvienusercontrol.Designer.cs">
+      <DependentUpon>Nhanvienusercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QLSHOP.cs" />
+    <Compile Include="View\SanPhamView\SanPhamUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SanPhamView\SanPhamUserControl.Designer.cs">
+      <DependentUpon>SanPhamUserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\HoaDonView\addHD.resx">
+      <DependentUpon>addHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NhanVienView\AddNV.resx">
+      <DependentUpon>AddNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Loginview\ChangepasswordNV.resx">
+      <DependentUpon>ChangepasswordNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Loginview\changepasswordowner.resx">
+      <DependentUpon>changepasswordowner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SanPhamView\ChiTietSP.resx">
+      <DependentUpon>ChiTietSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NhanVienView\DiemDanhUserControl.resx">
+      <DependentUpon>DiemDanhUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChuShopView\DoanhThuNam.resx">
+      <DependentUpon>DoanhThuNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChuShopView\DoanhThuThang.resx">
+      <DependentUpon>DoanhThuThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChuShopView\DoanhThuTuan.resx">
+      <DependentUpon>DoanhThuTuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NhanVienView\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HoaDonView\MaGiamGia_user.resx">
+      <DependentUpon>MaGiamGia_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NhanVienView\Employee_user.resx">
+      <DependentUpon>Employee_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Loginview\forgetpasswordform.resx">
+      <DependentUpon>forgetpasswordform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HoaDonView\Hoadon.resx">
+      <DependentUpon>Hoadon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Loginview\Loginform.resx">
+      <DependentUpon>Loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NhanVienView\Nhanvienusercontrol.resx">
+      <DependentUpon>Nhanvienusercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChuShopView\OwnerForm.resx">
+      <DependentUpon>OwnerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChuShopView\Owner_User.resx">
+      <DependentUpon>Owner_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SanPhamView\SanPhamUserControl.resx">
+      <DependentUpon>SanPhamUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitis 1.webp" />
+    <None Include="Resources\nick-f1.webp" />
+    <None Include="Resources\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doanhthu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanvien2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thoat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaylon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giayvua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giaynho.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\converse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giay_Bitis_Hunter_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLB-NY.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nick-f1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nike-Air-Jordan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Điểm danh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\fila.jpg" />
+    <Content Include="Resources\giay-adidas-superstar.jpg" />
+    <Content Include="Resources\giay-gucci.jpg" />
+    <Content Include="Resources\giày 1.jpg" />
+    <Content Include="Resources\giày 2.jpg" />
+    <Content Include="Resources\giày 3.jpg" />
+    <Content Include="Resources\MC.jpg" />
+    <Content Include="Resources\nick f4.jpg" />
+    <Content Include="Resources\nike 1.jpg" />
+    <Content Include="Resources\nike 2.jpg" />
+    <Content Include="Resources\nike 3.jpg" />
+    <Content Include="Resources\nike 4.jpg" />
+    <Content Include="Resources\nike 5.jpg" />
+    <Content Include="Resources\nike 6.jpg" />
+    <Content Include="Resources\nike 7.jpg" />
+    <Content Include="Resources\nike.jpg" />
+    <Content Include="Resources\vans-classic.jpg" />
+    <Content Include="Resources\yeezy-700.jpg" />
+    <Content Include="Resources\Yeezy.jpg" />
+    <Content Include="Resources\điểm danh.jpg" />
+    <None Include="Anh-Giay\adidas 1.jpg" />
+    <None Include="Anh-Giay\adidas.jpg" />
+    <None Include="Anh-Giay\adidas-eqt.jpg" />
+    <None Include="Anh-Giay\adidas-prophere.jpg" />
+    <None Include="Anh-Giay\balenciaga.jpg" />
+    <None Include="Anh-Giay\bitis 4.jpg" />
+    <None Include="Anh-Giay\bitis 5.jpg" />
+    <None Include="Anh-Giay\bitis 23.jpg" />
+    <None Include="Anh-Giay\bittis 2.jpg" />
+    <None Include="Anh-Giay\converse.jpg" />
+    <None Include="Anh-Giay\điểm danh.jpg" />
+    <None Include="Anh-Giay\fila.jpg" />
+    <None Include="Anh-Giay\giày 1.jpg" />
+    <None Include="Anh-Giay\giày 2.jpg" />
+    <None Include="Anh-Giay\giày 3.jpg" />
+    <None Include="Anh-Giay\Giay_Bitis_Hunter_1.jpg" />
+    <None Include="Anh-Giay\giay-adidas-superstar.jpg" />
+    <None Include="Anh-Giay\giay-gucci.jpg" />
+    <None Include="Anh-Giay\MC.jpg" />
+    <None Include="Anh-Giay\MLB-NY.jpg" />
+    <None Include="Anh-Giay\nick f4.jpg" />
+    <None Include="Anh-Giay\nick-f1.jpg" />
+    <None Include="Anh-Giay\nike 1.jpg" />
+    <None Include="Anh-Giay\nike 2.jpg" />
+    <None Include="Anh-Giay\nike 3.jpg" />
+    <None Include="Anh-Giay\nike 4.jpg" />
+    <None Include="Anh-Giay\nike 5.jpg" />
+    <None Include="Anh-Giay\nike 6.jpg" />
+    <None Include="Anh-Giay\nike 7.jpg" />
+    <None Include="Anh-Giay\nike.jpg" />
+    <None Include="Anh-Giay\Nike-Air-Jordan.jpg" />
+    <None Include="Anh-Giay\vans-classic.jpg" />
+    <None Include="Anh-Giay\Yeezy.jpg" />
+    <None Include="Anh-Giay\yeezy-700.jpg" />
+    <None Include="Resources\hộp quà mở.png" />
+    <Content Include="Resources\adidas 1.jpg" />
+    <Content Include="Resources\adidas-eqt.jpg" />
+    <Content Include="Resources\adidas-prophere.jpg" />
+    <Content Include="Resources\adidas.jpg" />
+    <Content Include="Resources\balenciaga.jpg" />
+    <Content Include="Resources\bitis 23.jpg" />
+    <Content Include="Resources\bitis 4.jpg" />
+    <Content Include="Resources\bitis 5.jpg" />
+    <Content Include="Resources\bittis 2.jpg" />
+    <Content Include="Resources\Mo.png" />
+    <Content Include="Resources\dong.png" />
+    <Content Include="Resources\reset.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
